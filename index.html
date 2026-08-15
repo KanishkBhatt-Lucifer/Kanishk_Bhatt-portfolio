@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanishk Bhatt — ECE Engineer · 5G &amp; Embedded Systems</title>
+<meta name="description" content="Portfolio of Kanishk Bhatt, Electronics &amp; Communication Engineer specializing in 5G RAN/Core infrastructure and embedded systems.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Faint schematic grid backdrop -->
+<div class="grid-backdrop" aria-hidden="true"></div>
+
+<!-- Left rail: PCB trace spine with reference-designator nav -->
+<nav class="railnav" aria-label="Section navigation">
+  <svg class="railnav__trace" viewBox="0 0 2 100" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="1" y1="0" x2="1" y2="100" />
+  </svg>
+  <a href="#hero" class="railnav__node" data-designator="U0" data-label="TOP"><span class="pad"></span><span class="railnav__text">TOP</span></a>
+  <a href="#about" class="railnav__node" data-designator="U1" data-label="ABOUT"><span class="pad"></span><span class="railnav__text">ABOUT</span></a>
+  <a href="#skills" class="railnav__node" data-designator="U2" data-label="SKILLS"><span class="pad"></span><span class="railnav__text">SKILLS</span></a>
+  <a href="#experience" class="railnav__node" data-designator="U3" data-label="EXPERIENCE"><span class="pad"></span><span class="railnav__text">EXPERIENCE</span></a>
+  <a href="#projects" class="railnav__node" data-designator="U4" data-label="PROJECTS"><span class="pad"></span><span class="railnav__text">PROJECTS</span></a>
+  <a href="#training" class="railnav__node" data-designator="U5" data-label="TRAINING"><span class="pad"></span><span class="railnav__text">TRAINING</span></a>
+  <a href="#education" class="railnav__node" data-designator="U6" data-label="EDUCATION"><span class="pad"></span><span class="railnav__text">EDUCATION</span></a>
+  <a href="#contact" class="railnav__node" data-designator="U7" data-label="CONTACT"><span class="pad"></span><span class="railnav__text">CONTACT</span></a>
+</nav>
+
+<!-- Mobile top bar -->
+<header class="topbar">
+  <span class="topbar__mark">KB</span>
+  <button class="topbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">01 · About</a>
+  <a href="#skills">02 · Skills</a>
+  <a href="#experience">03 · Experience</a>
+  <a href="#projects">04 · Projects</a>
+  <a href="#training">05 · Training</a>
+  <a href="#education">06 · Education</a>
+  <a href="#contact">07 · Contact</a>
+</div>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">SCHEMATIC / SIGNAL CHAIN / REV. 2026</p>
+
+      <svg class="signalchain" viewBox="0 0 900 260" role="img" aria-labelledby="scTitle scDesc">
+        <title id="scTitle">Signal chain diagram</title>
+        <desc id="scDesc">Antenna feeding an RF front end, into baseband DSP, producing the engineer as the output stage.</desc>
+
+        <!-- trace path -->
+        <path class="sc-trace" d="M40,130 H160 M160,130 V80 H260 M260,80 H340 M340,80 V130 H460 M460,130 H560 M560,130 V180 H680 M680,180 H760" />
+
+        <!-- antenna node -->
+        <g class="sc-node" transform="translate(40,130)">
+          <path class="sc-antenna" d="M0,-28 L-14,0 M0,-28 L14,0 M0,-28 V0" />
+          <circle r="4" class="sc-dot"/>
+          <text x="0" y="46" class="sc-label" text-anchor="middle">ANT</text>
+        </g>
+
+        <!-- RF front end block -->
+        <g class="sc-block" transform="translate(210,80)">
+          <rect x="-50" y="-24" width="100" height="48" rx="3"/>
+          <text x="0" y="-6" class="sc-block-title" text-anchor="middle">RF FRONT-END</text>
+          <text x="0" y="12" class="sc-block-sub" text-anchor="middle">LNA · MIXER</text>
+        </g>
+
+        <!-- Baseband DSP block -->
+        <g class="sc-block" transform="translate(400,130)">
+          <rect x="-58" y="-24" width="116" height="48" rx="3"/>
+          <text x="0" y="-6" class="sc-block-title" text-anchor="middle">BASEBAND DSP</text>
+          <text x="0" y="12" class="sc-block-sub" text-anchor="middle">CHANNEL EST.</text>
+        </g>
+
+        <!-- Output: the engineer -->
+        <g class="sc-block sc-block--out" transform="translate(620,180)">
+          <rect x="-92" y="-30" width="184" height="60" rx="3"/>
+          <text x="0" y="-8" class="sc-block-title sc-block-title--out" text-anchor="middle">KANISHK BHATT</text>
+          <text x="0" y="12" class="sc-block-sub sc-block-sub--out" text-anchor="middle">OUTPUT STAGE</text>
+        </g>
+
+        <!-- probe / output arrow -->
+        <g class="sc-node" transform="translate(760,180)">
+          <path class="sc-probe" d="M0,0 L26,0 M20,-6 L26,0 L20,6" />
+        </g>
+      </svg>
+
+      <h1 class="hero__title">Electronics &amp; Communication<br>Engineer</h1>
+      <p class="hero__role"><span class="typewriter" id="typewriter"></span><span class="cursor" aria-hidden="true">|</span></p>
+
+      <p class="hero__desc">Hands-on experience commissioning and maintaining live 5G RAN &amp; Core infrastructure, building embedded systems from sensor to firmware, and shipping AI/ML inference on constrained hardware. B.Tech ECE, College of Technology, GBPUAT Pantnagar — 2026.</p>
+
+      <div class="hero__actions">
+        <a href="assets/Kanishk_Bhatt_Resume.pdf" class="btn btn--primary" download>Download résumé <span class="btn__arrow">↓</span></a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+
+      <div class="hero__meta">
+        <span>Uttarakhand, India</span>
+        <span class="dot">·</span>
+        <span>Open to relocation</span>
+        <span class="dot">·</span>
+        <span class="status"><span class="status__led"></span> Actively interviewing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="section__head">
+      <span class="ref">U1</span>
+      <h2>About</h2>
+    </div>
+    <div class="about__grid">
+      <p class="about__text">
+        I'm an ECE undergraduate who has spent the last two years closer to the rack than the textbook —
+        maintaining a university 5G Use Case Lab's RAN and Core with zero unplanned outages over twelve-plus months,
+        and building four working use cases on top of it. My interest sits at the point where RF, embedded firmware
+        and AI/ML inference meet: getting a signal from an antenna to a decision a device can act on.
+        Alongside that I've spent 118+ days across five vocational placements — telecom, heavy electricals, aerospace,
+        power transmission and railway signalling — because I'd rather learn a domain by being inside its facility
+        than by reading about it.
+      </p>
+      <dl class="statgrid">
+        <div><dt>12+ mo</dt><dd>zero unplanned outages, 5G Lab</dd></div>
+        <div><dt>4</dt><dd>live 5G use cases shipped</dd></div>
+        <div><dt>5</dt><dd>vocational trainings completed</dd></div>
+        <div><dt>7.368</dt><dd>CGPA · no backlogs</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="section__head">
+      <span class="ref">U2</span>
+      <h2>Component library</h2>
+      <p class="section__sub">Core technical competencies, organized the way a parts bin would be.</p>
+    </div>
+
+    <div class="chiplib" id="chiplib">
+      <!-- populated by JS from data, but static fallback below for no-JS -->
+      <noscript>
+        <p>VLSI &amp; Hardware Design: Verilog HDL (basic), Xilinx Vivado, Cadence, Proteus.</p>
+        <p>Embedded Systems: Arduino IDE, IoT design, microcontroller integration, relay &amp; sensor systems.</p>
+        <p>5G &amp; RF Technology: 5G Core &amp; RAN management, RF/antenna basics (HFSS), 5G protocol stack.</p>
+        <p>AI/ML Integration: Qualcomm AI Upskilling, sensor-based ML inference, NVIDIA AI architecture fundamentals.</p>
+        <p>Software Tools: Docker, Python, HTML/CSS/JS, Linux (Ubuntu), Windows.</p>
+        <p>Domain Knowledge: digital &amp; analog electronics, digital &amp; analog communication, CMOS.</p>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section">
+    <div class="section__head">
+      <span class="ref">U3</span>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="timeline">
+      <article class="timeline__item">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <p class="timeline__date">Oct 2024 – Jul 2026</p>
+          <h3>Back-end Member — 5G Use Case Lab</h3>
+          <p class="timeline__org">College of Technology, GBPUAT</p>
+          <ul>
+            <li>Handled and maintained 5G RAN and Core infrastructure for the university's dedicated 5G lab, with zero unplanned outages over 12+ months.</li>
+            <li>Developed 4 functional 5G use cases integrating hardware sensors, embedded systems and network protocols.</li>
+            <li>Worked from Ericsson- and Qualcomm-certified knowledge bases to implement practical 5G deployments; coordinated with Coral Telecom.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="timeline__item">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <p class="timeline__date">Oct 2023 – Jul 2026</p>
+          <h3>Member — Electronika (ECE Branch Chapter)</h3>
+          <p class="timeline__org">College of Technology, GBPUAT</p>
+          <ul>
+            <li>Organized and led multiple inter-branch technical events; developed project management and cross-functional coordination skills.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section">
+    <div class="section__head">
+      <span class="ref">U4</span>
+      <h2>Projects</h2>
+      <p class="section__sub">Four primary builds, plus supporting work.</p>
+    </div>
+
+    <div class="projectgrid">
+      <article class="pcard">
+        <div class="pcard__tag">5G · WEB</div>
+        <h3>5G Network Visualization Tool</h3>
+        <p>Interactive web application demonstrating 5G core architecture and protocol stack, built with HTML/CSS/JS/JSON. Developed as part of 5G Use Case Lab operations and live-demoed to faculty and industry visitors.</p>
+        <div class="pcard__stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>JSON</span></div>
+      </article>
+
+      <article class="pcard">
+        <div class="pcard__tag">EMBEDDED · IOT</div>
+        <h3>Smart Health Monitoring &amp; Accident Prevention System</h3>
+        <p>Final-year project: a real-time IoT-based embedded system integrating physiological and vehicular sensors for continuous health monitoring and collision prevention, with microcontroller-based decision logic and alert actuation.</p>
+        <div class="pcard__stack"><span>Embedded C</span><span>Sensors</span><span>Alert Logic</span></div>
+      </article>
+
+      <article class="pcard">
+        <div class="pcard__tag">SECURITY · HARDWARE</div>
+        <h3>Magnetic Reed Switch Proximity Detection</h3>
+        <p>Hardware security system using magnetic reed switch sensors for proximity-based door lock and intrusion detection.</p>
+        <div class="pcard__stack"><span>Reed Switch</span><span>Circuit Design</span></div>
+      </article>
+
+      <article class="pcard">
+        <div class="pcard__tag">AI/ML · 5G</div>
+        <h3>AI-ML Smart Tourism Safety &amp; Intrusion Detection</h3>
+        <p>5G Lab project combining AI/ML inference with sensor networks and 5G connectivity for real-time intrusion detection and automated alert triggering.</p>
+        <div class="pcard__stack"><span>AI/ML</span><span>5G Connectivity</span><span>Sensors</span></div>
+      </article>
+    </div>
+
+    <div class="projectlist">
+      <h3 class="projectlist__title">Additional builds</h3>
+      <ul>
+        <li><strong>Arduino Obstacle Avoider Bot</strong> — autonomous navigation using ultrasonic sensors and servo-based obstacle avoidance in Arduino C.</li>
+        <li><strong>Home Appliance Automation System</strong> — relay- and microcontroller-driven automation with a mobile application interface.</li>
+        <li><strong>AI-Powered Channel Estimation for 5G NR</strong> — final-year research comparing a DNN estimator against LS/MMSE baselines in MATLAB.</li>
+        <li><strong>Full Adder &amp; CMOS Inverter</strong> — schematic/layout design and DRC in Cadence Virtuoso.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ TRAINING ============ -->
+  <section id="training" class="section">
+    <div class="section__head">
+      <span class="ref">U5</span>
+      <h2>Vocational training</h2>
+      <p class="section__sub">118+ days on-site and remote, across five sectors.</p>
+    </div>
+
+    <div class="traintrack" role="list">
+      <div class="traintrack__item" role="listitem">
+        <span class="traintrack__days">15d · on-site</span>
+        <h4>Telecom Technologies</h4>
+        <p>BSNL, Haridwar — Aug 2023</p>
+      </div>
+      <div class="traintrack__item" role="listitem">
+        <span class="traintrack__days">28d · on-site</span>
+        <h4>CNC &amp; Welding Technologies</h4>
+        <p>BHEL, Haridwar — Jun 2025</p>
+      </div>
+      <div class="traintrack__item" role="listitem">
+        <span class="traintrack__days">45d · remote</span>
+        <h4>Aerospace &amp; Space Technologies</h4>
+        <p>India Space Labs — Jun 2025</p>
+      </div>
+      <div class="traintrack__item" role="listitem">
+        <span class="traintrack__days">15d · on-site</span>
+        <h4>Power Transmission</h4>
+        <p>PTCUL, Rishikesh — Jul 2025</p>
+      </div>
+      <div class="traintrack__item" role="listitem">
+        <span class="traintrack__days">15d · on-site</span>
+        <h4>Railways S&amp;T Technologies</h4>
+        <p>RVNL, Rishikesh — Aug 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION + CERTS ============ -->
+  <section id="education" class="section">
+    <div class="section__head">
+      <span class="ref">U6</span>
+      <h2>Education &amp; certifications</h2>
+    </div>
+
+    <div class="edu__grid">
+      <div class="edu__card">
+        <h3>B.Tech, Electronics &amp; Communication Engineering</h3>
+        <p class="edu__org">College of Technology, GBPUAT, Pantnagar</p>
+        <p class="edu__meta">Sept 2022 – Jul 2026 · CGPA 7.368 / 10 · No backlogs</p>
+      </div>
+      <div class="edu__card">
+        <h3>Secondary &amp; Senior Secondary</h3>
+        <p class="edu__org">Kendriya Vidyalaya F.R.I., Dehradun</p>
+        <p class="edu__meta">10th — 97.8% &nbsp;·&nbsp; 12th — 96.6%</p>
+      </div>
+    </div>
+
+    <div class="certs">
+      <span class="cert">Ericsson 5G</span>
+      <span class="cert">Qualcomm 5G Technology</span>
+      <span class="cert">Qualcomm AI Upskilling ×2</span>
+      <span class="cert">Cisco Cybersecurity &amp; Packet Tracer</span>
+      <span class="cert">NPTEL — Intro to Aerospace</span>
+      <span class="cert">NSE — Electricity Derivatives</span>
+      <span class="cert">Embedded Systems ESD — ARM Cortex-M4 (PANTECH.AI)</span>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section section--contact">
+    <div class="section__head">
+      <span class="ref">U7</span>
+      <h2>Contact</h2>
+      <p class="section__sub">Currently evaluating offers across telecom, embedded systems, and PSU/defence pipelines — reach out directly.</p>
+    </div>
+
+    <div class="contactgrid">
+      <a class="contactcard" href="mailto:linked.kanishkbhatt@gmail.com">
+        <span class="contactcard__label">EMAIL</span>
+        <span class="contactcard__value">linked.kanishkbhatt@gmail.com</span>
+      </a>
+      <a class="contactcard" href="tel:+919412990366">
+        <span class="contactcard__label">PHONE</span>
+        <span class="contactcard__value">+91 94129 90366</span>
+      </a>
+      <div class="contactcard contactcard--static">
+        <span class="contactcard__label">LOCATION</span>
+        <span class="contactcard__value">Uttarakhand, India</span>
+      </div>
+      <a class="contactcard" href="assets/Kanishk_Bhatt_Resume.pdf" download>
+        <span class="contactcard__label">RÉSUMÉ</span>
+        <span class="contactcard__value">Download PDF ↓</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed &amp; built as a static site · Kanishk Bhatt © 2026</p>
+  </footer>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
